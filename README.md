@@ -28,6 +28,23 @@ cp -rf ../Urqa-Cordova-Plugin/libs/* ./platforms/android/libs/
     </feature>
 ```
 
+## write to init code to mainActivity.java
+
+```java
+ @Override
+    public void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        super.init();
+
+        UrqaPlugin.UrqaInit( this, "10EB2BF7" );	//  add this line ( second param is apikey )
+
+        // Set by <content src="index.html" /> in config.xml
+        super.loadUrl(Config.getStartUrl());
+
+    }
+```
+
 
 # Sample index.html
 
