@@ -7,13 +7,26 @@ Urqa-Cordova-Plugin
 
 ## js file copy
 
+```sh
 cp -f ../Urqa-Cordova-Plugin/www/js/stacktrace.js ./www/js/stacktrace.js
 cp -f ../Urqa-Cordova-Plugin/www/js/urqaplugin.js ./www/js/urqaplugin.js
-
+```
 
 ## src file copy
+
+```sh
 cp -rf ../Urqa-Cordova-Plugin/src/* ./platforms/android/src/
 cp -rf ../Urqa-Cordova-Plugin/libs/* ./platforms/android/libs/
+```
+
+## write plugin code to ./www/config.xml  
+
+```
+	<feature name="UrqaPlugin">
+        <param name="android-package"
+               value="com.netand.urqa.UrqaPlugin" />
+    </feature>
+```
 
 
 # Sample index.html
