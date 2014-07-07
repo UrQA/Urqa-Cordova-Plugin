@@ -1,7 +1,7 @@
 Urqa-Cordova-Plugin
 ===================
 
-Urqa-Cordova-Plugin
+Urqa-Cordova-Plugin V 0.1
 
 # Menual Install
 
