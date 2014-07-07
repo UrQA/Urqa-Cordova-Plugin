@@ -1,4 +1,4 @@
-Urqa-Cordova-Plugin
+Urqa-Cordova-Plugin v0.1
 ===================
 
 Urqa-Cordova-Plugin
@@ -62,3 +62,7 @@ cp -rf ../Urqa-Cordova-Plugin/libs/* ./platforms/android/libs/
 
 </script>
 ```
+
+# Links
+
+Stacktrace.js : http://stacktracejs.com/
