@@ -1,7 +1,7 @@
 Urqa-Cordova-Plugin
 ===================
 
-Urqa-Cordova-Plugin
+Urqa-Cordova-Plugin V 0.1
 
 # Menual Install
 
@@ -92,3 +92,7 @@ cp -rf ../Urqa-Cordova-Plugin/libs/* ./platforms/android/libs/
 
 </script>
 ```
+
+#Links
+
+Stacktrace.js : http://stacktracejs.com/

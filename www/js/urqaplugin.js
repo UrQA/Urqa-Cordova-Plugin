@@ -6,6 +6,24 @@ var createUrqa = function(){
 
 	ret_obj.exec = cordova.require('cordova/exec'); 
 
+	var converToJavaTypeException = function( trace ){
+		var ret = trace.join('\n\t');
+
+		try{
+
+			var msg = "";
+			for( var i in trace ){
+				var tmp = trace[i].split('@');
+				tmp[0] = tmp[0].replace( '()', '' );
+				msg = msg + '\tat ' + tmp[0] + '(' + tmp[1] + ')' + '\n';
+			}
+
+			return msg;
+		}catch(err){}
+
+		return ret;
+	} 
+
 	ret_obj.send_error = function( err ){
 
 		var trace = printStackTrace({e: err});
@@ -17,7 +35,7 @@ var createUrqa = function(){
 	        function(error){ 
 	        	//writelog("error");
 	        }, 
-	        "UrqaPlugin", "test_exception", ['message', trace.join('\n\t') ] );
+	        "UrqaPlugin", "test_exception", ['message', converToJavaTypeException( trace ) ] );
 
 	};
 
@@ -35,7 +53,7 @@ var createUrqa = function(){
 	        function(error){ 
 	        	
 	        }, 
-	        "UrqaPlugin", "test_exception", [message, trace.join('\n\t') ] );
+	        "UrqaPlugin", "test_exception", [ message, converToJavaTypeException( trace ) ] );
 
 	}
 
